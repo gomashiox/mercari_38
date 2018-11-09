@@ -19,6 +19,9 @@ end
 
   gem 'devise'
   gem 'pry-rails'
+  gem 'carrierwave'
+  gem 'fog-aws'
+  gem 'mini_magick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
