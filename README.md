@@ -143,7 +143,7 @@
 |name|string|null: false|
 
 ### Association
-- has_many :catecory_m
+- has_many :category_m
 - has_many :items
 
 ##sizes
