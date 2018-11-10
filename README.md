@@ -157,3 +157,4 @@
 
 ### Association
 - belongs_to : deal
+- belongs_to : users
