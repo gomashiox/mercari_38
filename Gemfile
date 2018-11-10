@@ -23,6 +23,15 @@ end
   gem 'fog-aws'
   gem 'mini_magick'
 
+  gem 'rspec-rails'
+  gem 'haml-rails'
+  gem 'font-awesome-rails'
+  gem 'jquery-rails'
+  gem 'erb2haml'
+  gem 'factory_bot_rails'
+  gem 'kaminari'
+  gem 'nokogiri'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use mysql as the database for Active Record
