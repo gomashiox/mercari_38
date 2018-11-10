@@ -4,7 +4,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|brand_name|text|add_index|
+|name|text|add_index|
 |category_l_id|integer|null: false|
 
 ### Association
@@ -20,15 +20,17 @@
 |description|text|null: false|
 |status|integer|null: false|
 |shipping_fee|integer|null: false|
-|arrive_date|integer|null: false|
+|arrived_date|integer|null: false|
 |like_count|integer|null: false|
 |category_s_id|integer|null: false|
 |category_m_id|integer|null: false|
 |category_l_id|integer|null: false|
-
+|seller_id|integer|null: false|
+|buyer_id|integer|null: false|
 
 ### Association
-- belongs_to :user
+- belongs_to :seller_deal, class_name: "User", foreign key: "seller_id"
+- belongs_to :buyer_deal, class_name "User", foreign key: "buyer_id"
 - has_many : likes, dependent: :destroy
 - has_many : images, dependent: :destroy
 - belongs_to : category_s
@@ -53,10 +55,15 @@
 |birthday|string|null:false|
 
 ### Association
+- has_many : seller_deals, class_name: "Deal", foreign_key: seller_id, dependent: :destroy
+- has_many : buyer_deals, class_name: "Deal", foreign_key: buyer_id, dependent: :destroy
 - has_many : items, dependent: :destroy
 - has_many : likes, dependent: :destroy
 - has_many : deals
 - has_many : comments
+- has_many : selliing_items, : :{ where("buyer_id is NULL") }, class_name "Item", foreign_key: "seller_id"
+- has_many : sold_items, : :{ where("buyer_id is not NULL") }, class_name "Item", foreign_key: "seller_id"
+- has_many : bought_items, class_name "Item", foreign_key: "seller_id"
 
 ## deals
 
@@ -64,10 +71,13 @@
 |------|----|-------|
 |item_id|reference|null: false,foreign_key: true|
 |dealt_at|datetime|null: false|
+|seller_id|integer|null: false,foreign_key: true|
+|buyer_id|integer|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :item
-- belongs_to :user
+- belongs_to :seller, class_name: "User",foreign_key: :seller_id
+- belongs_to :buyer, class_name: "User",foreign_key: :buyer_id
 - has_many : deal_messages, dependent: :destroy
 
 ## likes
