@@ -69,10 +69,10 @@
                 %i.fas.fa-angle-right.fa-lg
         %li.mypage-go-list
           %a 一覧を見る
-    %section.history-container.bold
+    %section.past-dealing-container.bold
       %h2.history-container__head
         購入した商品
-      %ul.history-container__tabs
+      %ul.past-dealing-container__tabs
         %li.active.tab-label
           %h3
             %a
@@ -81,9 +81,10 @@
           %h3
             %a
               過去の取引
-      .history-container__content
+      .past-dealings-container__content
         %ul.mypage-item-list.active
           %li.mypage-item-not-found.bold 取引中の商品がありません
         %ul.mypage-item-list
           %li.mypage-item-not-found.bold 過去に取引した商品がありません
+          
   = render partial: 'sidebar'
