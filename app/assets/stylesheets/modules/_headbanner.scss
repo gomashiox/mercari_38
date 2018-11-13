@@ -1,0 +1,50 @@
+  main{
+    #topMain{
+      height: 390px;
+      background-image:url("https://www.mercari.com/jp/assets/img/common/jp/top/main_bg_pc.jpg");
+      div.headbanner{
+        margin: 5px 290px;
+        position: relative;
+        &-content{
+          width: 480px;
+          position: absolute;
+          top: 50px;
+          left: -100px;
+          font-family: $font-source;
+          color: #2E2E2E;
+          h2{
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 72px;
+
+          }
+          p{
+            margin-top: 16px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+          }
+          .headbanner-store{
+            margin: 24px 0 0;
+            .pull-left{
+              padding-right: 180px;
+              float: left;
+              img{
+                margin-left: -600px;
+                height: 50px;
+                width: 170px;
+                overflow: hidden;
+              }
+            }
+          }
+        }
+        img{
+          position: relative;
+          left: 170px;
+          margin-left: 00px;
+          width: 440px;
+          float: right;
+        }
+      }
+    }
+  }
