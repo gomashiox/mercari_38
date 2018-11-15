@@ -10,7 +10,8 @@
 @import './modules/footbanner';
 @import './modules/footer';
 @import './modules/new_item_btn';
+@import './sidebar';
 
-@import "./sidebar";
-@import "./users";
-
+//マイページ画面
+@import './mypage';
+@import './profile'
