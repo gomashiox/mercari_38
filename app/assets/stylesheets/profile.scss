@@ -25,13 +25,12 @@
         &__content {
           height: 100%;
           padding-top: 80px;
-          image_tag.image-icon {
+          .icon_image {
             border-radius: 50%;
-            vertical-align: middle;
           }
           input.input-name {
             width: 190px;
-            margin: 0 0 0 8px;
+            margin: 0 0 40px 8px;
             vertical-align: middle;
             height: 26px;
             padding: 10px 16px 9px;
@@ -54,7 +53,6 @@
           border: 1px solid #ccc;
           background: #fff;
           font-size: 16px;
-    //      line-height: 1.5;
           }
           button.btn-default.btn-red {
             background-color: #ea352d;
