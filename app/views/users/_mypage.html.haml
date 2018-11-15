@@ -1,3 +1,5 @@
+= render 'items/header'
+= render partial: 'sidebar'
 %main.l-container.clearfix
   %section.user-icon
     %a
@@ -78,5 +80,5 @@
     .past-dealings-container__content
       %img{alt: "box", height: "60", src: "/assets/background_logo.svg", width: "60"}/
       取引中の商品がありません
-= render partial: 'sidebar'
--# = render partial: 'footer_sell_btn'
+
+= render 'items/new_item_btn'
