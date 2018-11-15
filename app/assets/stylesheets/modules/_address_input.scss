@@ -1,0 +1,25 @@
+.address-form-inner{
+  padding: 30px 64px;
+  border-top: 1px solid #eee;
+
+  &:last-child{
+    padding: 64px 64px 0px;
+  }
+}
+
+.form-group__input{
+  span.option{
+    background-color: #ccc;
+  }
+}
+
+.input-state {
+  margin-top: 8px;
+  width: 100%;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+}
