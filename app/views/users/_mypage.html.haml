@@ -1,0 +1,84 @@
+= render 'items/header'
+= render partial: 'sidebar'
+%main.l-container.clearfix
+  %section.user-icon
+    %a
+      %figure
+        = image_tag "user_photo_noimage.png", size: "50x50", class: "icon_image"
+        %h2.bold name
+      .user-number
+        %div
+          評価
+          %span.bold -
+        %div
+          出品数
+          %span.bold -
+  %section.notification-todo
+    %ul.notification-todo__tabs
+      %li.active
+        %h3
+          %a
+            お知らせ
+      %li
+        %h3
+          %a
+            やることリスト
+    %ul.notification__content
+      %li
+        %a.notification-todo__content-link
+          =image_tag "mercari_profile.png", class: "mercari_icon"
+          .notification-todo__content-link--text
+            message
+          %time
+            %i.far.fa-clock.my-gray
+            %span - 日前
+            %i.fas.fa-angle-right.fa-lg
+      %li
+        %a.notification-todo__content-link
+          =image_tag "mercari_profile.png", class: "mercari_icon"
+          .notification-todo__content-link--text
+            message
+          %time
+            %i.far.fa-clock.my-gray
+            %span - 日前
+            %i.fas.fa-angle-right.fa-lg
+      %li
+        %a.notification-todo__content-link
+          =image_tag "mercari_profile.png", class: "mercari_icon"
+          .notification-todo__content-link--text
+            message
+          %time
+            %i.far.fa-clock.my-gray
+            %span - 日前
+            %i.fas.fa-angle-right.fa-lg
+      %li
+        %a.notification-todo__content-link
+          =image_tag "mercari_profile.png", class: "mercari_icon"
+          .notification-todo__content-link--text
+            message
+          %time
+            %i.far.fa-clock.my-gray
+            %span - 日前
+            %i.fas.fa-angle-right.fa-lg
+      %li.mypage-go-list
+        %a 一覧を見る
+    -# %ul.todo__content
+    -#   %li
+    -#     現在やることはありません
+  %section.past-dealings-container
+    %h2.past-dealings-container__head
+      購入した商品
+    %ul.past-dealings-container__tabs
+      %li.active
+        %h3
+          %a
+            取引中
+      %li
+        %h3
+          %a
+            過去の取引
+    .past-dealings-container__content
+      =image_tag "background_logo.svg", class: "mercari_gray_icon"
+      取引中の商品がありません
+
+= render 'items/new_item_btn'

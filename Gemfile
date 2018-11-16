@@ -26,7 +26,6 @@ end
   gem 'rspec-rails'
   gem 'haml-rails'
   gem 'font-awesome-rails'
-  gem 'jquery-rails'
   gem 'erb2haml'
   gem 'factory_bot_rails'
   gem 'kaminari'

@@ -1,0 +1,29 @@
+= render 'shared/login_header'
+%main.single-main
+  .login-panel
+    .login-no-account
+      %p アカウントをお持ちでない方はこちら
+      %a{ href: "https://www.mercari.com/jp/signup/?after_save_callback=https%3A%2F%2Fwww.mercari.com%2Fjp%2F"} 新規会員登録
+    .login-form-inner
+      %button#facebook-login.btn-default.btn-sns__facebook
+        .fab.fa-facebook-square
+        Facebookでログイン
+      %button#google-login.btn-default.btn-sns__google
+        .fab.fa-google-plus-g
+        Googleでログイン
+    %form{ action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+      .login-form-inner
+        .form-group
+          %input.input-default{ autocomplete: "off", name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+        .form-group
+          %input.input-default{ autocomplete: "off", name: "password", placeholder: "パスワード", type: "password"}/
+        .form-group
+          .g-recaptcha{"data-sitekey": "6LeK9HkUAAAAAL8mLfKNdK_vo7oKQN0joY0w_74e"}
+          %button.login-submit.btn-default{type: "submit"} ログイン
+          %input{ name: "login_callback", type: "hidden", value: "https://www.mercari.com/jp/"}/
+          %input{ name: "__csrf_value", type: "hidden"}/
+          %a{ href: "https://www.mercari.com/jp/password/reset/start/"} パスワードをお忘れの方
+  / 優先順位低、別タスクのため仮置き
+  / %form#login_form_facebook{action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+  / %form#login_form_google{action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+= render 'shared/login_footer'
