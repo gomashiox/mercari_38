@@ -1,0 +1,30 @@
+.mypage-clearfix{
+    margin: 40px auto 0 ;
+    margin-bottom: 40px;
+    width : 1020px;
+  }
+.logout-content {
+  float: right;
+  width: 700px;
+  margin: 14px;
+  padding: 0;
+  background-color : #fff;
+  .chapter-container {
+    margin: 0;
+
+    form {
+      height:179px;
+          button.logout-red {
+            background-color: #ea352d;
+            border: 1px solid #ea352d;
+            color: #fff;
+            width: 47%;
+            line-height: 48px;
+            font-size: 13px;
+            margin: 60px 0 0 25%;
+            cursor: pointer;
+            min-height: 1.5em;
+        }
+      }
+    }
+  }
