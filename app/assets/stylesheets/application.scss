@@ -1,7 +1,9 @@
-
+@import "font-awesome";
 @import './mixin/mixin';
-@import './reset';
 @import './font-source';
+
+// ログイン画面
+@import "./modules/*";
 
 // メイン画面用
 @import './modules/headbanner';
@@ -10,7 +12,9 @@
 @import './modules/footbanner';
 @import './modules/footer';
 @import './modules/new_item_btn';
+@import './sidebar';
 
-@import "./sidebar";
-@import "./users";
-
+// マイページ画面
+@import './mypage';
+@import './profile';
+@import './logout';
