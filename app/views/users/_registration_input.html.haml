@@ -1,0 +1,50 @@
+.single-container
+  %header.login-header
+    %h1
+      =link_to root_path, class: "mercari-home" do
+        = image_tag "logo.svg", class: 'images', alt: "mercari"
+    %nav.progress-bar.signup-bar
+      %ol.clearfix
+        %li.active
+          会員情報
+          .progress-status-top
+        %li
+          電話番号認証
+          .progress-status
+        %li
+          住所入力
+          .progress-status
+        %li
+          支払い方法
+          .progress-status
+        %li
+          完了
+          .progress-status
+  %main.single-main
+    .m-single-container
+      .l-single-title 会員情報入力
+      .registration-form-inner
+      %form{ action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+        .s-single-container
+          .form-group__input
+            %label ニックネーム
+            %span 必須
+            %input.input-default{ autocomplete: "off", name: "name", placeholder: "例）メルカリ太郎", type: "name"}/
+          .form-group__input
+            %label メールアドレス
+            %span 必須
+            %input.input-default{ autocomplete: "off", name: "email", placeholder: "PC・携帯どちらでも可", type: "email"}/
+          .form-group__input
+            %label パスワード
+            %span 必須
+            %input.input-default{ autocomplete: "off", name: "password", placeholder: "6文字以上", type: "password"}
+          .form-group__input
+            %label パスワード(確認)
+            %span 必須
+            %input.input-default{ autocomplete: "off", name: "password", placeholder: "6文字以上", type: "password"}
+          .form-group__input
+            .g-recaptcha{"data-sitekey": "6LeK9HkUAAAAAL8mLfKNdK_vo7oKQN0joY0w_74e"}
+            %button.next-submit.btn-default{type: "submit"} 次へ進む
+            %input{ name: "login_callback", type: "hidden", value: "https://www.mercari.com/jp/"}/
+            %input{ name: "__csrf_value", type: "hidden"}/
+= render 'shared/login_footer'

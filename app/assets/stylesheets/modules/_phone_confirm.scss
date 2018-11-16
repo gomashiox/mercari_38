@@ -1,0 +1,31 @@
+.single-title-confirm{
+  padding: 8px 24px;
+  font-size: 22px;
+  font-weight:bold;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-group__input{
+  p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+.form-group__text {
+  text-align: right;
+  margin: 40px 0 0;
+  color: #0099e8;
+    
+    a{
+      text-decoration: none;
+    }
+    
+    a:hover{
+      text-decoration: underline;
+      opacity: .7;
+    }
+}
+
