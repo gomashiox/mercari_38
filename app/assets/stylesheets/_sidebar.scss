@@ -1,7 +1,12 @@
 .l-side {
+
     float: left;
     width: 280px;
-    margin: 40px 40px 0 0;
+<<<<<<< HEAD
+    margin: 40px 40px 0 10%;
+=======
+    margin: 40px 40px 55px 192px;
+>>>>>>> Mame1209/master
     box-sizing: border-box;
     .clearfix::after{
       clear:both;
@@ -17,14 +22,19 @@
     margin-bottom: 5px;
   }
   &__list--item{
-    max-height: 48px;
+    height: 48px;
     text-decoration: none;
     display: block;
     padding: 16px;
     color: #333;
     background-color: white;
+<<<<<<< HEAD
+    margin-bottom: 2px;
+    margin-top: -12px;
+=======
     margin-bottom: -12px;
     margin-top: 2px;
+>>>>>>> Mame1209/master
     box-sizing:border-box;
       i.fas.fa-angle-right{
         float: right;

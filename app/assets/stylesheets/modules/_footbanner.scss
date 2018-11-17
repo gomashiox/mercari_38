@@ -3,10 +3,11 @@
   background-size: cover;
   background-position: center;
   font-family: $font-source;
+  clear:both;
   &__contents {
     overflow: hidden;
     position: relative;
-    width: 750px;
+    width: 53%;
     height: 260px;
     margin: 0 auto;
     color: #fff;

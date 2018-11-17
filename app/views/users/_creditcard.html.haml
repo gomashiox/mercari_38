@@ -1,0 +1,17 @@
+= render 'items/header'
+= render 'sidebar'
+%main.l-container.clearfix
+  %main.mypage.clearfix
+    .credit-content
+      %section.chapter-container
+        .h2.chapter-container__title 支払い方法
+      %section.credit-content-inner
+        .h3.chapter-sub-container__c-title クレジットカード一覧
+        %section.set-credit-content
+          .button.btn-default.btn-red{type: "submit"} クレジットカードを追加する
+        %section.set-regist
+          %a
+            支払い方法について
+= render 'items/footbanner'
+= render 'items/footer'
+
