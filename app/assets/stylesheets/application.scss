@@ -4,7 +4,7 @@
 
 @import './mixin/mixin';
 @import './font-source';
-@import "./modules/*";
+
 
 // ログイン画面
 @import "./modules/*";
@@ -26,8 +26,4 @@
 
 @import "./modules/user_confirm";
 
-=======
-// ログイン画面
-// @import "./modules/*";
-=======
-@import './logout';
+
