@@ -1,6 +1,10 @@
 @import "font-awesome";
+
+@import './reset';
+
 @import './mixin/mixin';
 @import './font-source';
+@import "./modules/*";
 
 // ログイン画面
 @import "./modules/*";
@@ -14,12 +18,16 @@
 @import './modules/new_item_btn';
 @import './sidebar';
 
-// 商品詳細ページ
-@import "./sidebar";
-@import "./users";
-@import './item_detail';
-
 // マイページ画面
 @import './mypage';
 @import './profile';
+@import './logout';
+@import './creditcard';
+
+@import "./modules/user_confirm";
+
+=======
+// ログイン画面
+// @import "./modules/*";
+=======
 @import './logout';
