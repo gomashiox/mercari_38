@@ -1,0 +1,76 @@
+.bigbox{
+    padding:0 0 50px 0;
+    width:100%;
+    height:100%;
+  .mypage-clearfix{
+      margin: 40px auto 0 ;
+      margin-bottom: 100px;
+      width : 1020px;
+    }
+  .l-content {
+    float: right;
+    width: 700px;
+    margin: 7px;
+    padding: 0;
+    background-color : #fff;
+    .chapter-container {
+      margin: 0;
+      &__title {
+        font-size: 24px;
+        padding: 14px 24px;
+        text-align: center;
+        font-weight: bold;
+      }
+      form {
+        .profile-icon {
+          height: 156px;
+          background: image-url('background_user.jpg');
+          text-align: center;
+          &__content {
+            height: 100%;
+            padding-top: 80px;
+            .icon_image {
+              border-radius: 50%;
+            }
+            input.input-name {
+              width: 190px;
+              margin: 0 0 40px 8px;
+              vertical-align: middle;
+              height: 26px;
+              padding: 10px 16px 9px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              line-height: 1.5;
+              font-size: 16px;
+              }
+            }
+          }
+        .profile-text {
+          padding: 40px 16px;
+          textarea.textarea-default {
+            min-height: 216px;
+            display: block;
+            width: 95%;
+            max-width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: #fff;
+            font-size: 16px;
+            }
+            button.btn-default.btn-red {
+              background-color: #ea352d;
+              border: 1px solid #ea352d;
+              color: #fff;
+              width: 99%;
+              line-height: 50px;
+              font-size: 14px;
+              margin-top: 16px;
+              cursor: pointer;
+              min-height: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }

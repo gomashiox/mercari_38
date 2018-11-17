@@ -1,0 +1,22 @@
+= render 'items/header'
+
+.bigbox
+  = render 'sidebar'
+  %main.l-container.clearfix
+    %main.mypage.clearfix
+      .l-content
+        %section.chapter-container
+          %h2.chapter-container__title プロフィール
+          %form{action: ""}
+            %input{type: "hidden"}/
+            .profile-icon
+              .profile-icon__content
+                %image.icon
+                  = image_tag "user_photo_noimage.png", size: "50x50", class: "icon_image"
+                %input.input-name{type: "text", value: "asuka"}/
+            .profile-text
+              %textarea.textarea-default{name: "introduction", cols: "20", rows: "10", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+              %input{type: "hidden"}/
+              %button.btn-default.btn-red{type: "submit"} 変更する
+= render 'items/footbanner'
+= render 'items/footer'

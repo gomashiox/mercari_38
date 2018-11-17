@@ -1,7 +1,14 @@
-
+@import "font-awesome";
+<<<<<<< HEAD
+// @import './reset';
+=======
+>>>>>>> Mame1209/master
 @import './mixin/mixin';
-@import './reset';
 @import './font-source';
+@import "./modules/*";
+
+// ログイン画面
+@import "./modules/*";
 
 // メイン画面用
 @import './modules/headbanner';
@@ -10,9 +17,22 @@
 @import './modules/footbanner';
 @import './modules/footer';
 @import './modules/new_item_btn';
+@import './sidebar';
 
-@import "./sidebar";
-@import "./users";
+// マイページ画面
+@import './mypage';
+@import './profile';
+<<<<<<< HEAD
+@import './logout';
+@import './creditcard';
 
+<<<<<<< HEAD
 @import "./modules/user_confirm";
 
+=======
+// ログイン画面
+// @import "./modules/*";
+=======
+@import './logout';
+>>>>>>> Mame1209/master
+>>>>>>> Mame1209/master

@@ -1,0 +1,139 @@
+.m-single-container{
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.s-single-container{
+  max-width: 320px;
+  margin: 0 auto;
+  background: #fff;
+  padding-bottom: 70px;
+}
+
+.registration-form-inner{
+  padding: 32px 64px;
+  border-top: 1px solid #eee;
+}
+
+.form-group__input{
+  margin: 36px 0 0;
+  
+  &:first-child{
+  margin: 0;
+  }
+  
+  &:last-child{
+  margin: 38px 0 0;
+  }
+  
+  label{
+  font-weight: 600;
+  }
+  
+  span{
+    background: #ea352d;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  
+  input{
+    margin-top: 8px ;
+  }
+  
+  .next-submit{
+    margin: 40px 0 0;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff
+  }
+  
+  .images{
+    max-width:250px ;
+  }
+}
+
+// Status_bar_header
+
+.login-header{
+    text-align: center;
+    height: 128px;
+    display: flex;
+    justify-content: center;
+  
+  h1{
+    margin: 40px 0 0;
+  }
+  
+  .images{
+      width: 185px;
+      height: 49px;
+      top: 30px;
+      left: 150px;
+    }
+}
+
+.progress-status {
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  background: #ccc;
+  border-radius: 50%;
+  
+  &:after {
+    position: absolute;
+    bottom: 5px;
+    display: block;
+    content: '';
+    width: 113%;
+    height: 2px;
+    background: #ccc;
+    right: 53%;
+  }
+}
+
+.progress-status-top{
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  background: #ea352d;
+  border-radius: 50%;
+}
+
+.progress-status1 {
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  background: #ea352d;
+  border-radius: 50%;
+  
+  &:after,  {
+    position: absolute;
+    bottom: 5px;
+    display: block;
+    content: '';
+    width: 113%;
+    height: 2px;
+    background: #ea352d;
+    right: 53%;
+  }
+}
+
+.progress-bar li {
+  position: relative;
+  left: 40px;
+  top: 37px;
+  z-index: 1;
+  display: inline-block;
+  min-width: 87px;
+  margin: 0 16px 0 0;
+  font-size: 13px;
+  color: #888;
+  
+  &.active{
+    color: #ea352d;
+  }
+}
