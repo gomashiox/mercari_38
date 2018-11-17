@@ -9,8 +9,9 @@ class User < ApplicationRecord
   has_many :items, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :deals
-  has_many :comments
-  has_many :selliing_items, -> { where("buyer_id is NULL") }, class_name: "Item", foreign_key: "seller_id"
+  has_many :deals_messages
+  has_many :comments, dependent: :destroy
+  has_many :selling_items, -> { where("buyer_id is NULL") }, class_name: "Item", foreign_key: "seller_id"
   has_many :sold_items, -> { where("buyer_id is not NULL") }, class_name: "Item", foreign_key: "seller_id"
   has_many :bought_items, class_name: "Item", foreign_key: "seller_id"
 end
