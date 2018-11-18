@@ -1,0 +1,328 @@
+%body
+  = render 'items/header'
+  %main.item-detail
+    %section.item-box-container.l-single.container
+      %h1.item-name
+        コーチ！！！！！！！！！
+      .item-main-content.clearfix
+        .item-photo
+          .owl-stage-outer
+            .owl-stage{style: "left: 0px; width: 1200px;"}
+              .owl-item.active
+                = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "300x300", class: "owl-lazy"
+              .owl-item
+                = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "300x300", class: "owl-lazy"
+              .owl-item
+                = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "300x300", class: "owl-lazy"
+              .owl-item
+                = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "300x300", class: "owl-lazy"
+          %ul.owl-dots.clearfix
+            %li.owl-dot.active
+              = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "75x75", class: "owl-lazy"
+            %li.owl-dot
+              = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "75x75", class: "owl-lazy"
+            %li.owl-dot
+              = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "75x75", class: "owl-lazy"
+            %li.owl-dot
+              = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "75x75", class: "owl-lazy"
+        %table.item-detail-table
+          %tbody
+            %tr
+              %th 出品者
+              %td
+                %a{href: ""}つつみん＠トレジャー・ハンター
+                %div.item-user-ratings
+                  .item-user-rating
+                    %i.fas.fa-smile.fa.icon.my-pink
+                    %span 0
+                  .item-user-rating
+                    %i.fas.fa-meh.fa.icon.my-orange
+                    %span 0
+                  .item-user-rating
+                    %i.fas.fa-frown.fa.icon.my-blue
+                    %span 500
+            %tr
+              %th カテゴリー
+              %td
+                %a{href: ""}
+                  category_l_id
+                %a{href: ""}
+                  .item-sub-category
+                    %i.fas.fa-angle-right.blue-icon
+                    category_m_id
+                %a{href: ""}
+                  .item-sub-category
+                    %i.fas.fa-angle-right.blue-icon
+                    category_s_id
+            %tr
+              %th ブランド
+              %td
+                %a{href: ""}
+                  コーチ
+            %tr
+              %th 商品の状態
+              %td
+                バックとして使うことは不可
+            %tr
+              %th 配送料の負担
+              %td
+                送料込み（出品者）
+            %tr
+              %th 配送の方法
+              %td
+                コウノトリ
+            %tr
+              %th 配送元地域
+              %td
+                %a{href: ""}
+                  兵庫県
+            %tr
+              %th 発送日の目安
+              %td
+                気が向いたら
+      .item-price-box.text-center
+        %span.item-price.bold
+          ￥
+          1,000,000
+        %span.item-tax (税込)
+        %span.item-shipping-fee
+          送料込み！
+      %a.item-buy-btn.bold{"data-client": "hidden", href: "/items/buy"} 購入画面に進む
+      .item-description
+        %p.item-description-inner
+          【商品説明】
+      .item-button-container.clearfix
+        .item-button-left
+          %button.item-button
+            %i.far.fa-heart
+            %span いいね!
+            %span.fade-in-down
+              11
+          %a.item-button{ href: ""}
+            %i.far.fa-flag
+            %span 不適切な商品の報告
+        .item-button-right
+          %a{href: ""}
+            %i.fas.fa-lock.my-rightblue
+            %span あんしん・あんぜんへの取り組み
+    .message-container
+      .message-content
+        %ul.message-items
+          %li.clearfix
+            %a.message-user{href: ""}
+              %figure
+                %img{alt: "", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/user-icon.svg?2033025938"}
+                -# %figcaption.bold
+            .message-body
+              .message-body-text こんばんは。どうしてviewがうまくいかないんですか？
+              .message-icons.clearf
+                %time.message-icon-left
+                  %i.far.fa-clock
+                    %span 1日前
+          %li.clearfix
+            %a.message-user{href: ""}
+              %figure
+                %img{alt: "", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/user-icon.svg?2033025938"}
+            .message-body
+              .message-body-text
+              ご検討よろしくお願いします。
+              .message-icons.clearfix
+                %time.message-icon-left
+                  %i.far.fa-clock
+                  %span 1日前
+          %li.clearfix
+            %a.message-user{href: ""}
+              %figure
+                %img{alt: "", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/user-icon.svg?2033025938"}
+            .message-body.one
+              .message-body-text
+              いぇーい！！！
+              .message-icons.clearfix
+                %time.message-icon-left
+                  %i.far.fa-clock
+                  %span 1日前
+        .message-content
+          %form.message-form{action: "https://www.mercari.com/jp/comment/add/", method: "POST"}
+            %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+            %textarea.textarea-default{name: "body", type: "text", :value => ""}
+            %button.btn-gray{type: "submit"}
+              %span コメントする
+    %ul.nav-item-link-prev-next.clearfix
+      %li.nav-item-link-prev
+        %a{href: ""}
+          %i.fas.fa-angle-left
+          左
+      %li.nav-item-link-next
+        %a{href: ""}
+          右
+          %i.fas.fa-angle-right
+    .item-social-media
+      %ul.social-media-box
+        %li
+          %a.share-btn{"data-window-name": "facebook_window", href: "", target: "_blank"}
+            %i.fab.fa-facebook
+        %li
+          %a.share-btn{"data-window-name": "twitter_window", href: ""}
+            %i.fab.fa-twitter
+        %li
+          %a.share-btn{"data-window-name": "pinterest_window", href: "", target: "_blank"}
+            %i.fab.fa-pinterest
+    .items-in-user-profile
+      %section.items-box-container.clearfix
+        %h2.items-box-head
+          %a{href: ""} つつみんさんのその他の商品
+        .items-box-content.clearfix
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.lazyloaded{alt: "安室奈美恵", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 22,500
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 10
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.lazyloaded{alt: "安室奈美恵", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 22,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 8
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.lazyloaded.is-higher-height{alt: "安室奈美恵", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 32,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 7
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-height.lazyloaded{alt: "安室奈美恵",src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 32,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 5
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-height.lazyloaded{alt: "安室奈美恵", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 28,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 10
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-height.lazyloaded{alt: "安室奈美恵",src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 48,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 5
+                  %p.item-box-tax (税込)
+      %section.items-box-container.clearfix.items-box-overflow
+        %h2.items-box-head
+          %a{href: ""}
+            安室奈美恵 のその他 その他の商品
+        .items-box-content.clearfix
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-width.lazyloaded{alt: "安室奈美恵", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 9,500
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 24
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-width.lazyloaded{alt:  "安室奈美恵" ,src:"https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 6,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 2
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-width.lazyloaded{alt: "安室奈美恵", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 1,700
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 2
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-width.lazyloaded{alt: "安室奈美恵", src:"https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 99,999
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 2
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.is-higher-width.lazyloaded{alt: "安室奈美恵", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+                %figcaption
+                  .item-sold-out-badge
+                    %div SOLD
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 12,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 6
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{href: ""}
+              %figure.items-box-photo
+                %img.lazyloaded{alt: "安室奈美恵", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m99888946452_1.jpg?1538912295"}
+              .items-box-body
+                .items-box-name.font-2 限定！新品未使用の安室奈美恵
+                .items-box-num.clearfix
+                  .items-box-price.font-5 ¥ 22,000
+                  .items-box-likes.font-2
+                    %i.far.fa-heart
+                    %span 2
+                  %p.item-box-tax (税込)
+  = render 'items/footbanner'
+  = render 'items/footer'
