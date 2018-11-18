@@ -1,6 +1,10 @@
 @import "font-awesome";
+
+@import './reset';
+
 @import './mixin/mixin';
 @import './font-source';
+
 
 // ログイン画面
 @import "./modules/*";
@@ -18,3 +22,8 @@
 @import './mypage';
 @import './profile';
 @import './logout';
+@import './creditcard';
+
+@import "./modules/user_confirm";
+
+
