@@ -1,6 +1,6 @@
+@import './modules/reset';
 @import "font-awesome";
 
-@import './reset';
 
 @import './mixin/mixin';
 @import './font-source';
@@ -25,5 +25,6 @@
 @import './creditcard';
 
 @import "./modules/user_confirm";
+@import './item_detail'
 
 
