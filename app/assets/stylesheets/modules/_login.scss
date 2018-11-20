@@ -19,12 +19,12 @@ body {
   height: 49px;
   line-height: 49px
   }
-  
+
   h1 {
   display: inline-block;
   margin: 11px 0 12px;
   }
-  
+
   .images {
     width: 185px;
     height: 49px;
@@ -40,11 +40,11 @@ body {
 .login-no-account {
   padding: 40px 64px;
   text-align: center;
-  
+
   p {
   font-size: 14px;
   }
-  
+
   a {
   display: block;
   margin: 8px 0 0;
@@ -59,23 +59,23 @@ body {
 .login-form-inner {
   padding: 32px 64px;
   border-top: 1px solid #eee;
-  
+
   &:first-child {
     padding: 24px 64px 32px;
     border: 0;
   }
-  
+
   & .form-group {
     margin: 24px 0 0;
     &:first-child {
     margin: 0;
     }
   }
-  
+
   & .input-default {
     margin: 0;
   }
-  
+
   .form-group a {
   display: block;
   margin: 40px 0 0;
@@ -94,18 +94,18 @@ body {
   position: relative;
 }
 
-.fab {
+.fab-login {
   position: absolute;
   top: 50%;
   left: 16px;
   transform: translate(0, -50%);
   font-size: 20px;
-  
+
   .fa-facebook-square {
   color: #fff;
   background: #385185;
   }
-  
+
   .fa-google-plus-g {
   color: #fff;
   background: #dc4e41;
@@ -117,7 +117,7 @@ body {
   background: #385185;
   margin: 0 0 16px;
   }
-  
+
   &__google {
   background: #dc4e41;
   }
@@ -148,14 +148,14 @@ body {
   height: 140px;
   padding: 40px 0;
   text-align: center;
-  
+
   li a {
   text-decoration: none;
   font-size: 12px;
   margin: 0 0 0 16px;
   color: #333;
   }
-  
+
   nav ul{
     color: #333;
     text-decoration: none;
@@ -164,13 +164,13 @@ body {
     display: inline-block;
     list-style: none;
   }
-  
+
   p {
     margin: 8px 0 0;
     font-size: 13px;
     display: block;
   }
-  
+
   .single-footer-logo {
   width: 80px;
   height: 65px;
