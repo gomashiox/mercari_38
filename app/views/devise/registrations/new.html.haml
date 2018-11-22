@@ -1,21 +1,80 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.single-container
+  %header.login-header
+    %h1
+      =link_to root_path, class: "mercari-home" do
+        = image_tag "logo.svg", class: 'images', alt: "mercari"
+    %nav.progress-bar.signup-bar
+      %ol.clearfix
+        %li.active
+          会員情報
+          .progress-status-top
+        %li
+          電話番号認証
+          .progress-status
+        %li
+          住所入力
+          .progress-status
+        %li
+          支払い方法
+          .progress-status
+        %li
+          完了
+          .progress-status
+  %main.single-main
+    .m-single-container
+      .l-single-title 会員情報入力
+      .registration-form-inner
+      / %form{ action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+      / registration_path
+      = form_for @user do |f|
+        = devise_error_messages!
+        .s-single-container
+          .form-group__input
+            = f.label :ニックネーム
+            %span 必須
+            = f.text_field :nickname, autofocus: true, placeholder: "例）メルカリ太郎", class: "input-default"
+            / %input.input-default{ autocomplete: "off", name: "name", placeholder: "例）メルカリ太郎", type: "name"}
+          .form-group__input
+            = f.label :メールアドレス
+            %span 必須
+            = f.email_field :email, placeholder: "PC・携帯どちらでも可", class: "input-default"
+            / %input.input-default{ autocomplete: "off", name: "email", placeholder: "PC・携帯どちらでも可", type: "email"}
+          .form-group__input
+            = f.label :パスワード
+            %span 必須
+            = f.password_field :password, placeholder: "6文字以上", autocomplete: "new-password", class: "input-default"
+            / %input.input-default{ autocomplete: "off", name: "password", placeholder: "6文字以上", type: "password"}
+          .form-group__input
+            = f.label :"パスワード(確認)"
+            %span 必須
+            = f.password_field :password, placeholder: "6文字以上", autocomplete: "new-password", class: "input-default"
+            / %input.input-default{ autocomplete: "off", name: "password", placeholder: "6文字以上", type: "password"}
+          .form-group__input
+            .g-recaptcha{"data-sitekey": "6LeK9HkUAAAAAL8mLfKNdK_vo7oKQN0joY0w_74e", "data-callback": "validateRecaptcha",}
+              = link_to "次へ進む", user_sms_confirmation_path, class: "button next-submit btn-default"
+            / # = f.submit :次へ進む, class: "button next-submit btn-default", disabled: "disabled"
+= render 'shared/login_footer'
+
+
+
+/ %h2 Sign up
+/ = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+/   = devise_error_messages!
+/   .field
+/     = f.label :email
+/     %br/
+/     = f.email_field :email, autofocus: true, autocomplete: "email"
+/   .field
+/     = f.label :password
+/     - if @minimum_password_length
+/       %em
+/         (#{@minimum_password_length} characters minimum)
+/     %br/
+/     = f.password_field :password, autocomplete: "new-password"
+/   .field
+/     = f.label :password_confirmation
+/     %br/
+/     = f.password_field :password_confirmation, autocomplete: "new-password"
+/   .actions
+/     = f.submit "Sign up"
+/ = render "devise/shared/links"
