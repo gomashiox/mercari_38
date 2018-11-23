@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show, :index, :update]
 
-  resources :items do
+  resource :items do
     collection do
       get 'get_category_ms' # /profiles/get_cities
     end
