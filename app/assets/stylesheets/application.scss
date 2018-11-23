@@ -1,7 +1,4 @@
 @import "font-awesome";
-
-@import './reset';
-
 @import './mixin/mixin';
 @import './font-source';
 
@@ -25,5 +22,8 @@
 @import './creditcard';
 
 @import "./modules/user_confirm";
+
+// 購入画面
+@import'./deal';
 
 
