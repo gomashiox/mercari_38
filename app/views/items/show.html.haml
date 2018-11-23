@@ -3,7 +3,7 @@
   %main.item-detail
     %section.item-box-container.l-single.container
       %h1.item-name
-        コーチ！！！！！！！！！
+        コーチなんだよ！！！！！！！！！！！！！！！！！！
       .item-main-content.clearfix
         .item-photo
           .owl-stage-outer
@@ -16,7 +16,7 @@
                 = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "300x300", class: "owl-lazy"
               .owl-item
                 = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "300x300", class: "owl-lazy"
-          %ul.owl-dots.clearfix
+          %ul.owl-dots
             %li.owl-dot.active
               = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "75x75", class: "owl-lazy"
             %li.owl-dot
@@ -80,31 +80,31 @@
               %th 発送日の目安
               %td
                 気が向いたら
-      .item-price-box.text-center
-        %span.item-price.bold
-          ￥
-          1,000,000
-        %span.item-tax (税込)
-        %span.item-shipping-fee
-          送料込み！
-      %a.item-buy-btn.bold{"data-client": "hidden", href: "/items/buy"} 購入画面に進む
-      .item-description
-        %p.item-description-inner
-          【商品説明】
-      .item-button-container.clearfix
-        .item-button-left
-          %button.item-button
-            %i.far.fa-heart
-            %span いいね!
-            %span.fade-in-down
-              11
-          %a.item-button{ href: ""}
-            %i.far.fa-flag
-            %span 不適切な商品の報告
-        .item-button-right
-          %a{href: ""}
-            %i.fas.fa-lock.my-rightblue
-            %span あんしん・あんぜんへの取り組み
+        .item-price-box.text-center
+          %span.item-price.bold
+            ￥
+            1,000,000
+          %span.item-tax (税込)
+          %span.item-shipping-fee
+            送料込み！
+        %a.item-buy-btn.bold{"data-client": "hidden", href: "/items/buy"} 購入画面に進む
+        .item-description
+          %p.item-description-inner
+            【商品説明】
+        .item-button-container.clearfix
+          .item-button-left
+            %button.item-button
+              %i.far.fa-heart
+              %span いいね!
+              %span.fade-in-down
+                11
+            %a.item-button{ href: ""}
+              %i.far.fa-flag
+              %span 不適切な商品の報告
+          .item-button-right
+            %a{href: ""}
+              %i.fas.fa-lock.my-rightblue
+              %span あんしん・あんぜんへの取り組み
     .message-container
       .message-content
         %ul.message-items
