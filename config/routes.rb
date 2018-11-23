@@ -20,7 +20,9 @@ Rails.application.routes.draw do
 
   resource :items do
     collection do
-      get 'get_category_ms' # /profiles/get_cities
+      get 'get_category_ms'
+      get 'get_category_ss'
+      # /profiles/get_cities
     end
   end
 end
