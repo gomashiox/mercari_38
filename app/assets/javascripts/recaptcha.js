@@ -4,3 +4,4 @@ function validateRecaptcha (id) {
       button.removeAttribute('disabled');
     }
   }
+  
