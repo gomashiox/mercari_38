@@ -45,7 +45,7 @@ body {
   font-size: 14px;
   }
 
-  a {
+  .signup-btn {
   display: block;
   margin: 8px 0 0;
   border: 1px solid #0099e8;
@@ -92,9 +92,10 @@ body {
   text-align: center;
   color: #fff;
   position: relative;
+  text-decoration: none;
 }
 
-.fab-login {
+.loginbutton {
   position: absolute;
   top: 50%;
   left: 16px;
@@ -126,6 +127,18 @@ body {
 .input-default {
   width: 90%;
   height: 30px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+
+.input-defaults {
+  width: 100%;
+  height: 50px;
   padding: 10px 16px 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
