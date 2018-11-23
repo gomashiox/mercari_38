@@ -57,10 +57,11 @@
     .items-box-content.clearfix
       .items-box.one
         %a.detail-page
-          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m14231170270_1.jpg?1541932821", class: "detail-page__img")
+        = link_to items_path do
+          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", class: "detail-page__img")
           .detail-page__body
             %h3.item-name
-              CHANELアイシャドウ
+              COACH ショルダーバック
             .item-price.clearfix
               ¥ 2,700
             .tax

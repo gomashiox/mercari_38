@@ -1,15 +1,11 @@
 .default-containerz
   %header
-    
     .logo-and-search__logo.left-float
       = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1324730246'
     .search
       %form.logo-and-search__search.right-float
         %input{value:"", placeholder:"キーワードから探す" }
         %i.fa.fa-search
-
-
-
     .lists.clearfix
       .lists__left.left-float
         %ul
@@ -19,11 +15,9 @@
           %li.brands
             %h2
               %a{href: ""} ブランドから探す
-
-
       .signin-and-signup.right-float
         %ul.account
           %li.signin-btn
-            %a.signin-btn__text{href: ""}ログイン
+            = link_to "ログイン", new_user_session_path, class: "signin-btn__text"
           %li.signup-btn
-            %a.signup-btn__text{href: ""}新規会員登録
+            = link_to "新規会員登録", index_user_registration_path, class: "signup-btn__text"

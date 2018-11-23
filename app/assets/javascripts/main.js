@@ -1,4 +1,4 @@
-$(function(){
+
    $(function() {
     $('.hidden1').css("display", "none");
     $('.hidden2').css("display", "none");
@@ -45,8 +45,6 @@ $(function(){
       alert("半角数字で入力してください");
     }
   });
- });
-
 
 $(document).on('change', '#category1', function() {
   console.log("test");
@@ -97,13 +95,12 @@ $(document).on('change', '#category2', function() {
 
 
 
-
-
-
-
-
-
-
-
-
+  $(".owl-dots li").mouseover(function(e){
+    $(".owl-dot").removeClass("active");
+    $(this).addClass("active");
+    var index = $(this).index();
+    index = index * -300 + "px"
+    $(".owl-stage").animate({left: index},500);
+    e.preventDefault();
+  });
 

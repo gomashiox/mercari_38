@@ -1,0 +1,35 @@
+.single-container
+  %header.login-header
+    %h1
+      =link_to root_path, class: "mercari-home" do
+        = image_tag "logo.svg", class: 'images', alt: "mercari"
+    %nav.progress-bar.signup-bar
+      %ol.clearfix
+        %li.active
+          会員情報
+          .progress-status-top
+        %li.active
+          電話番号認証
+          .progress-status1
+        %li.active
+          住所入力
+          .progress-status1
+        %li.active
+          支払い方法
+          .progress-status1
+        %li.active
+          完了
+          .progress-status1
+  %main.single-main
+    .m-single-container
+      .l-single-title 登録完了
+      .address-form-inner
+      %form{ action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+        .s-single-container
+          %p ありがとうございます。
+          %p 会員登録が完了しました。
+          .form-group__input
+            =link_to "メルカリをはじめる", root_path, class: "next-submit btn-default"
+  .banner-pc
+    = image_tag "banner-pc.jpg", class: 'images'
+= render 'shared/login_footer'

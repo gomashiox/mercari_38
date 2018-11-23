@@ -1,0 +1,53 @@
+.single-container
+  %header.login-header
+    %h1
+      =link_to root_path, class: "mercari-home" do
+        = image_tag "logo.svg", class: 'images', alt: "mercari"
+    %nav.progress-bar.signup-bar
+      %ol.clearfix
+        %li
+          会員情報
+          .progress-status-top
+        %li.active
+          電話番号認証
+          .progress-status1
+        %li
+          住所入力
+          .progress-status
+        %li
+          支払い方法
+          .progress-status
+        %li
+          完了
+          .progress-status
+  %main.single-main
+    .m-single-container
+      .single-title-confirm 電話番号認証
+      .confirmation-form-inner
+      %form{ action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+        .s-single-container
+          .form-group__input
+            %label 認証番号
+            %input.input-default{ autocomplete: "off", name: "name", placeholder: "認証番号を入力", type: "name"}/
+            %p SMSで届いた認証番号を入力してください
+          .form-group__input
+            = link_to "認証をして完了", new_user_address_path, class: "next-submit btn-default"
+            / # =link_to "認証をして完了", root_path, class: "next-submit btn-default"
+            / %button.next-submit.btn-default{type: "submit"} 認証をして完了
+      .confirmation-form-inner
+        .s-single-container
+          .form-group__input
+            %h3 30秒たっても認証番号が届かない方へ
+            %p 電話で認証番号を聞くこともできます。
+            %button.next-submit.btn-default{type: "submit"} 電話で認証番号を聞く（通話料無料）
+      .confirmation-form-inner
+        .s-single-container
+          .form-group__input
+          %h3 認証番号を再送することもできます。もう一度電話番号を入力して下さい。
+          %p 
+            %a{ href: "https://www.mercari.com/jp/privacy/"} 電話番号を再度入力する
+          %p 
+            ※SMSが届かない場合は
+            %a{ href: "https://www.mercari.com/jp/privacy/"} SMS受信設定
+            を確認して、もう一度電話番号を入力してください。
+= render 'shared/login_footer'

@@ -17,7 +17,8 @@ class ItemsController < ApplicationController
     render partial: 'select_category_s', locals: {category_m_id: params[:category_m_id]}
   end
 
-
+  def show
+  end
 
   def create
     @item = Item.new(item_params)
@@ -27,6 +28,8 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :image, :description, :category_l, :category_m, :category_s, :condition, :shipping_fee, :arrived_date, :size, :price)
   end
+
+
 
 
 end
