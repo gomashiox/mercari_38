@@ -44,24 +44,19 @@
             }
           }
         }
-      }
         .owl-dots{
           .owl-dot{
             display: inline-block;
             float: left;
             height: 75px;
-            img.owl-dot-inner{
-              width: 75px;
-              height: 75px;
-              opacity: 0.4;
-            }
+            width: 75px;
+            opacity: 0.4;
           }
-          .owl-dot.active{
-            img.owl-dot-inner{
-              opacity: 1;
-            }
+          .active{
+            opacity: 1;
           }
         }
+      }
       table.item-detail-table{
         float: right;
         width: 300px;
@@ -135,24 +130,25 @@
         }
       }
     }
-    .item-price-box{
-      margin: 24px 0 0;
-      text-align: center;
-      position: relative;
-      font-weight: 700;
-      top: 10px;
-      .item-price{
-        margin: 0 16px 0 0;
-        font-size: 50px;
-        color: black;
+      .item-price-box{
+        margin: 24px 0 0;
+        text-align: center;
+        font-weight: 700;
+        top: 10px;
+        .item-price{
+          position: relative;
+          top: 16px;
+          margin: 0 16px 0 0;
+          font-size: 50px;
+          color: black;
+        }
+        .item-tax{
+          font-size: 10px;
+        }
+        .item-shopping-fee{
+          font-size: 16px;
+        }
       }
-      .item-tax{
-        font-size: 10px;
-      }
-      .item-shopping-fee{
-        font-size: 16px;
-      }
-    }
     a.item-buy-btn{
       height: 60px;
       line-height: 60px;

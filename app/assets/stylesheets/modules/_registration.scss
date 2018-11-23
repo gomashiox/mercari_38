@@ -22,13 +22,19 @@
   margin: 0 auto;
 }
 
-.fa-envelope {
-  color: #ccc;
-  font-size: 20px
-}
-
 .btn-sns__mailaddress {
   background: #eee;
   margin: 0 0 16px;
   color: #000;
+  text-decoration: none;
+
+.fa-envelope {
+  color: #ccc;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+  font-size: 20px;
+  }
 }
