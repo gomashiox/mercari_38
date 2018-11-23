@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'items#index'
   # devise_for :users , :class_name => 'User'
   devise_for :users, skip: :all
@@ -16,7 +17,12 @@ Rails.application.routes.draw do
     get 'signup/complete', to: 'devise/registrations#complete', as: :new_user_complete
   end
   resources :users, only: [:show, :index, :update]
-  resource :items, only: [:show]
+
+  resource :items do
+    collection do
+      get 'get_category_ms' # /profiles/get_cities
+    end
+  end
 end
 
 #                   Prefix Verb   URI Pattern                    Controller#Action
