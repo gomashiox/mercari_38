@@ -1,7 +1,7 @@
 .deal-header
   %t1
-    %link_to
-    =image_tag "logo.svg",width:"185",height:"49"
+    =link_to root_path, class: "mercari-home" do
+      =image_tag "logo.svg",width:"185",height:"49"
 .wrap#deals_new
   %main.single-main
     %section.l-single-container.buy-item-container
@@ -9,48 +9,45 @@
       %section.buy-content.buy-item
         .buy-content-inner
           %h3.buy-item-image
-            / image
-          %p.buy-item-name.bold
-            / 名前
-          %p.buy-price-ja.bold
-            / 値段
-            %span.item-shipping-fee.f14.bold
-              送料込み
-          %ul.buy-accordion.not-have
-            %li.accordion-parent
-              .accordion-toggle
-                ポイントはありません
-          %ul.buy-price-table
-            %li.buy-price-row.buy-you-pay.bold
-              .buy-price-cell 支払い金額
-              .buy-price-cell
-                %span
-                  / itemの値段
-            .btn-red 購入する
-          /passの指定
+            %img.lazyload{alt: "", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m70068440240_1.jpg?1539045823"}/
+          %p.buy-item-name.bold レア！【新品未使用】エアラインキャップ カンタス航空
+          %form.buy-form{action: "https://www.mercari.com/jp/transaction/buy/done/m70068440240/", method: "POST", novalidate: "novalidate"}
+            %p.buy-price-ja.bold
+              ¥ 3,980
+              %span.item-shipping-fee.f14.bold 送料込み
+            %ul.buy-accordion.not-have
+              %li.accordion-parent
+                .accordion-toggle
+                  ポイントはありません
+            %ul.buy-price-table
+              %li.buy-price-row.buy-you-pay.bold
+                .buy-price-cell 支払い金額
+                .buy-price-cell
+                  %span
+            %button.btn-default.btn-red.bold{type: "submit"} 購入する
       %section.buy-content.buy-user-info
         .buy-content-inner
           %h3 配送先
           %address.buy-user-info-text
-            / = current_user.address.postal_code 郵便番号
+            〒114-0000
             %br/
-            / = current_user.address.prefecture 県
-            / = current_user.address.city 市
-            / = current_user.address.street_number 番地
-            %br
-            / = current_user.address.family_name 苗字
-            / = current_user.address.first_name 名前
+            東京都 渋谷区渋谷川
+            1-23-4
+            %br/
+            山田 太郎
           %p.buy-user-info-text
+          = link_to '#', class: "buy-user-info-fix" do
             %span 変更する
-      %section.buy-content.buy-user-info
+            = fa_icon "angle-right"
+      %section.buy-content.buy-user-info{data: {buy: "pay-method"}}
         .buy-content-inner
           %h3 支払い方法
           %p.buy-user-info-text
-            /each creditcard
-            %br
-              / month
-              %span /
-              / year
-              %figure
-                / image
+            ************9999
+            %br/
+            12 / 31
+            %figure
+              %img{alt: "visa", height: "15", src: "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?582886128", width: "49"}/
+          = link_to '#', class: "buy-user-info-fix" do
             %span 変更する
+            = fa_icon "angle-right"
