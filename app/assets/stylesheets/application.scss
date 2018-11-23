@@ -1,9 +1,4 @@
-@import './modules/reset';
-@import "font-awesome";
-<<<<<<< HEAD
-=======
 
->>>>>>> Mame1209/master
 @import './mixin/mixin';
 @import './font-source';
 
@@ -26,7 +21,5 @@
 @import './creditcard';
 
 @import "./modules/user_confirm";
-@import './item_detail'
-
-// 購入画面
-@import'./deal';
+@import './item_detail';
+@import './deal';

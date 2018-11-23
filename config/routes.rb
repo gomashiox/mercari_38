@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
-  root 'users#index'
-  get '/users/show', to: 'users#show'
 
-  devise_for :users
-
-=======
   root 'items#index'
   # devise_for :users , :class_name => 'User'
   devise_for :users, skip: :all
@@ -24,12 +18,12 @@ Rails.application.routes.draw do
     get 'signup/complete', to: 'devise/registrations#complete', as: :new_user_complete
   end
   resources :users, only: [:show, :index, :update]
->>>>>>> Mame1209/master
 
   resource :items do
     collection do
       get 'get_category_ms'
       get 'get_category_ss'
+      get  'deal'
       # /profiles/get_cities
     end
   end
