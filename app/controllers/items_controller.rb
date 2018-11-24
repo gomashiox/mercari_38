@@ -28,6 +28,9 @@ class ItemsController < ApplicationController
   def deal
   end
 
+  def completion
+  end
+
  private
   def item_params
     params.require(:item).permit(:name, :image, :description, :category_l, :category_m, :category_s, :condition, :shipping_fee, :arrived_date, :size, :price)

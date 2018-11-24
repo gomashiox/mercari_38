@@ -23,7 +23,8 @@ Rails.application.routes.draw do
     collection do
       get 'get_category_ms'
       get 'get_category_ss'
-      get  'deal'
+      get 'deal'
+      get 'completion'
       # /profiles/get_cities
     end
   end
