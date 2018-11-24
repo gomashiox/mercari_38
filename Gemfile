@@ -30,6 +30,7 @@ end
   gem 'factory_bot_rails'
   gem 'kaminari'
   gem 'nokogiri'
+  gem 'seed_dump'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
