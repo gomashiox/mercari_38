@@ -1,9 +1,14 @@
 = render 'shared/login_header'
 
+-# %body
+-#   %input#myfile{:type => "file"}/
+-#   -# %br/
+-#   -# %img#img1{:style => "width:300px;height:300px;"}/
+
 .single-main
   .sell-container
     .sell-container__inner
-      = form_for (@item) do |f|
+      = form_for (@item), html:{id: 'sell-form'} do |f|
         .sell-container__inner__head
           %h2
             商品の情報を入力
@@ -13,17 +18,39 @@
             必須
           %p
             最大4枚までアップロードできます
-          .sell-dropbox-container
-            .sell-upload-items
-            .sell-upload-drop-box
-              %input.sell-upload-drop-file
-                = f.fields_for :images do |i|
-                  = i.file_field :image_url
-              %pre.visible-pc
-                ドラッグアンドドロップ
-                またはクリックしてファイルをアップロード
+
+            .sell-upload-box
+              .sell-dropbox-container
+                .sell-upload-items
+                  %ul
+                    %li.sell-upload-drop-box#preview1
+                      = f.file_field :image_url, class: "sell-upload-drop-file", type: :file
+                      %img#img1{:style => "width:138px;height:138px;", class: "img1",}
+                    %li.sell-upload-drop-box#preview2
+                      = f.file_field :image_url, class: "sell-upload-drop-file", type: :file
+                      %img#img2{:style => "width:138px;height:138px;", class: "img2",}
+                    %li.sell-upload-drop-box#preview3
+                      = f.file_field :image_url, class: "sell-upload-drop-file", type: :file
+                      %img#img3{:style => "width:138px;height:138px;", class: "img3",}
+                    %li.sell-upload-drop-box#preview4
+                      = f.file_field :image_url, class: "sell-upload-drop-file", style: "none", type: :file
+                      %img#img4{:style => "width:138px;height:138px;", class: "img4",}
+
+
+
+          -# .sell-dropbox-container
+          -#   .sell-upload-items
+          -#   .sell-upload-drop-box
+          -#     %label.upload-img
+          -#       = f.file_field :image_url, class: "sell-upload-drop-file", style: "none"
+          -#     %pre.visible-pc
+          -#       ドラッグアンドドロップ
+          -#       またはクリックしてファイルをアップロード
+
+
+
         .sell-content
-          .form-group-first
+          .form-group-first#dropArea
             = f.label :name, "商品名", {class: 'form-label'}
             %span.form-require-sell
               必須
@@ -56,11 +83,6 @@
             .sell-form-box.hidden2
               .select-wrap2
                 = render partial: 'select_category_s', locals: {category_m_id: CategoryM.first.id}
-
-            -# .sell-form-box.hidden2
-            -#   .select-wrap2
-            -#     = f.select :category_s, [["----", "----"],["Tシャツ", "Tシャツ"], ["カーディガン", "カーディガン"],["ポンチョ", "ポンチョ"]],{},{class: "select-default-sell", id: "category3"}
-
 
 
 
