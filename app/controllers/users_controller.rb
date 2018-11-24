@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  include Wicked::Wizard
-  steps :new, :confirm, :auth, :address
+  # include Wicked::Wizard
+  # steps :new, :confirm, :auth, :address
 
 #   def show
 #     # @user = current_user
@@ -55,7 +55,7 @@ end
   # end
 
   # def show
-    
+
   # end
 
   # def new
