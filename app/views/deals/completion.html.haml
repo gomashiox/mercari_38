@@ -7,6 +7,7 @@
     %section.l-single-container.buy-item-container
       %h2.l-single-head お支払いが完了しました
       %section.buy-content.buy-item
-      =link_to root_path, class: "mercari-home" do
-        .button.btn-default.btn-red.bold{type: "submit"} トップへ戻る
+        .section.btn-content
+        = link_to root_path, class: "mercari-home" do
+          .button.btn-default.btn-red.bold{type: "submit"} トップへ戻る
 = render 'shared/login_footer'

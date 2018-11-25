@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
 
-=======
->>>>>>> Mame1209/master
   root 'items#index'
   # devise_for :users , :class_name => 'User'
   devise_for :users, skip: :all
@@ -26,12 +23,15 @@ Rails.application.routes.draw do
     collection do
       get 'get_category_ms'
       get 'get_category_ss'
-<<<<<<< HEAD
+
       get 'deal'
       get 'completion'
-=======
->>>>>>> Mame1209/master
       # /profiles/get_cities
+
+  resource :deals do
+    get 'dealing'
+    get 'completion'
+  end
     end
   end
 end
