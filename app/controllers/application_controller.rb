@@ -8,9 +8,11 @@ class ApplicationController < ActionController::Base
     Rails.env.production?
   end
 
-  def basic_auth
-    authenticate_or_request_with_http_basic do |username, password|
-      username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]
+    def basic_auth
+      authenticate_or_request_with_http_basic do |username, password|
+        username == a && password == a
+        # ENV["BASIC_AUTH_USER"]
+        # ENV["BASIC_AUTH_PASSWORD"]
     end
   end
 end
