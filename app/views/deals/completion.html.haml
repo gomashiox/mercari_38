@@ -1,0 +1,13 @@
+.deal-header
+  %t1
+    =link_to root_path, class: "mercari-home" do
+      =image_tag "logo.svg",width:"185",height:"49"
+.wrap#deals_new
+  %main.single-main
+    %section.l-single-container.buy-item-container
+      %h2.l-single-head お支払いが完了しました
+      %section.buy-content.buy-item
+        .section.btn-content
+        = link_to root_path, class: "mercari-home" do
+          .button.btn-default.btn-red.bold{type: "submit"} トップへ戻る
+= render 'shared/login_footer'
