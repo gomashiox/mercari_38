@@ -9,9 +9,9 @@
       %section.buy-content.buy-item
         .buy-content-inner
           %h3.buy-item-image
-            %img.lazyload{alt: "", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m70068440240_1.jpg?1539045823"}/
+            %img.lazyload{alt: "", src: "https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m70068440240_1.jpg?1539045823", size: "300x300", class: "owl-lazy"}/
           %p.buy-item-name.bold レア！【新品未使用】エアラインキャップ カンタス航空
-          %form.buy-form{action: "https://www.mercari.com/jp/transaction/buy/done/m70068440240/", method: "POST", novalidate: "novalidate"}
+          %form.buy-form{href: "/items/deals/completion"}
             %p.buy-price-ja.bold
               ¥ 3,980
               %span.item-shipping-fee.f14.bold 送料込み
@@ -24,7 +24,7 @@
                 .buy-price-cell 支払い金額
                 .buy-price-cell
                   %span
-            %button.btn-default.btn-red.bold{type: "submit",href: "/items/completion"} 購入する
+            %button.btn-default.btn-red.bold{href: "/items/deals/completion"} 購入する
       %section.buy-content.buy-user-info
         .buy-content-inner
           %h3 配送先
@@ -32,7 +32,7 @@
             〒114-0000
             %br/
             東京都 渋谷区渋谷川
-            1-23-4
+            1-999
             %br/
             紺野 衣里
           %p.buy-user-info-text
