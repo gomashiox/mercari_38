@@ -33,13 +33,24 @@
                     %li.sell-upload-drop-box#preview2
                       = f.file_field :image_url, class: "sell-upload-drop-file", type: :file
                       %img#img2{:style => "width:138px;height:138px;", class: "img2",}
+                        %div#img2-edit
+                          %a{:href => ""} 編集
+                        %div#img2-delite
+                          %a 削除
                     %li.sell-upload-drop-box#preview3
                       = f.file_field :image_url, class: "sell-upload-drop-file", type: :file
                       %img#img3{:style => "width:138px;height:138px;", class: "img3",}
+                        %div#img3-edit
+                          %a{:href => ""} 編集
+                        %div#img3-delite
+                          %a 削除
                     %li.sell-upload-drop-box#preview4
                       = f.file_field :image_url, class: "sell-upload-drop-file", style: "none", type: :file
                       %img#img4{:style => "width:138px;height:138px;", class: "img4",}
-
+                        %div#img4-edit
+                          %a{:href => ""} 編集
+                        %div#img4-delite
+                          %a 削除
 
 
           -# .sell-dropbox-container
