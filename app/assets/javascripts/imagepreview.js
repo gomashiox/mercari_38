@@ -1,4 +1,6 @@
 $(function(){
+  $('#img-edit').css("display", "none");
+  $('#img-delite').css("display", "none");
   $('#preview1').change(function(e){
     //ファイルオブジェクトを取得する
     var file = e.target.files[0];
@@ -15,11 +17,31 @@ $(function(){
       return function(e){
         $("#img1").attr("src", e.target.result);
         $("#img1").attr("title", file.name);
+        $('#img-edit').show();
+        $('#img-delite').show();
+        // var div = $('<div class="img-edit"></div>');
+        // $("#img1").append(div);
+        // console.log(aaaa)
       };
     })(file);
     reader.readAsDataURL(file);
   });
 });
+
+
+$(document).on('click','#img-delite', function() {
+        $('#img1').removeAttr('src title style');
+        $('#img1').replaceWith("<img id=img1 class=img1 style=width:138px;height:138px;>"+"サンプル"+"</img>");
+        $('#img-edit').hide();
+        $('#img-delite').hide();
+  });
+
+
+
+
+
+
+
 
 $(function(){
   $('#preview2').change(function(e){

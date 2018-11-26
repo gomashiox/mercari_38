@@ -92,13 +92,43 @@
   z-index:300;
   }
 
-.img1{
+.img1 {
   position:relative;
   bottom:142px;
   z-index:10;
   background-color:#f5f5f5;
  }
+#img-edit{
+display:inline-block;
+  position:relative;
+  bottom:158px;
+  background-color:#f5f5f5;
+  width:69px;
+  height:44px;
+  color:black;
+  line-height: 44px;
+a{
+  font-size:14px;
+  color: #0099e8;
+  text-decoration: none;
+  }
+}
 
+#img-delite{
+display:inline-block;
+  position:relative;
+  bottom:158px;
+  background-color:#f5f5f5;
+  width:69px;
+  height:44px;
+  color:black;
+  line-height: 44px;
+a{
+  font-size:14px;
+  color: #0099e8;
+  text-decoration: none;
+  }
+}
 .img2{
   position:relative;
   bottom:142px;

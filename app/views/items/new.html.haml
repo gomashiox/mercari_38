@@ -26,6 +26,10 @@
                     %li.sell-upload-drop-box#preview1
                       = f.file_field :image_url, class: "sell-upload-drop-file", type: :file
                       %img#img1{:style => "width:138px;height:138px;", class: "img1",}
+                        %div#img-edit
+                          %a{:href => ""} 編集
+                        %div#img-delite
+                          %a 削除
                     %li.sell-upload-drop-box#preview2
                       = f.file_field :image_url, class: "sell-upload-drop-file", type: :file
                       %img#img2{:style => "width:138px;height:138px;", class: "img2",}
