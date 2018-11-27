@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root 'items#index'
   # devise_for :users , :class_name => 'User'
   devise_for :users, skip: :all
@@ -22,7 +23,15 @@ Rails.application.routes.draw do
     collection do
       get 'get_category_ms'
       get 'get_category_ss'
+
+      get 'deal'
+      get 'completion'
       # /profiles/get_cities
+
+  resource :deals do
+    get 'dealing'
+    get 'completion'
+  end
     end
   end
 end
