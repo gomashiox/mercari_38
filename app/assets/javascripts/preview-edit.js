@@ -15,12 +15,21 @@ console.log("test2");
 });
 
 // モーダルウィンドウが閉じるときの処理
-$(".modalClose").click(function(){
+$("#preview-modalClose").click(function(){
     $(this).parents(".preview-modal").fadeOut();
     $(".modalOpen").removeClass("open");
     return false;
 });
-
+$("#preview-edit-cancell").click(function(){
+    $(this).parents(".preview-modal").fadeOut();
+    $(".modalOpen").removeClass("open");
+    return false;
+});
+$("#preview-edit-finish").click(function(){
+    $(this).parents(".preview-modal").fadeOut();
+    $(".modalOpen").removeClass("open");
+    return false;
+});
 });
 
 
