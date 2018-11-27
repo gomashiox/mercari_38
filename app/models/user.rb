@@ -64,5 +64,4 @@ class User < ApplicationRecord
     '鹿児島県': 46,
     '沖縄県': 47,
     }
-    validates :password, presence: true, uniqueness: true, length: {minimum: 6, maximum: 30}
 end

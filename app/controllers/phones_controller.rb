@@ -64,28 +64,26 @@ class SmsAuthController < ApplicationController
 end
 # https://qiita.com/kidach1/items/cd63063fa98aaa5030bd
 
-
-
-def send_sms
-  return status_forbidden if @phone.blank?
-  @phone.assign_attributes(send_sms_params)
-  ActiveRecord::Base.transaction do
-    @phone.confirmation_code = @phone.generate_confirmation_code
-    @phone.code_sent_at = Time.current
-    @phone.save!(context: :send_sms)
-    Spacemarket::Twilio.send(to: @phone.confirming_number, code: @phone.confirmation_code)
-    status_updated(representer.single_default(phone))
-  end
-end
-# 認証コードの検証
-def confirm
-  return status_forbidden if @phone.blank?
-  return status_bad_request unless @phone.valid_code?(code: confirmation_params[:confirmation_code])
-  ActiveRecord::Base.transaction do
-    @phone.is_confirmed = true
-    @phone.phone_number = @phone.confirming_number
-    @phone.save!
-    status_updated(representer.single_default(phone))
-  end
-end
-# https://blog.spacemarket.com/code/twilio-rails-sms/
+# def send_sms
+#   return status_forbidden if @phone.blank?
+#   @phone.assign_attributes(send_sms_params)
+#   ActiveRecord::Base.transaction do
+#     @phone.confirmation_code = @phone.generate_confirmation_code
+#     @phone.code_sent_at = Time.current
+#     @phone.save!(context: :send_sms)
+#     Spacemarket::Twilio.send(to: @phone.confirming_number, code: @phone.confirmation_code)
+#     status_updated(representer.single_default(phone))
+#   end
+# end
+# # 認証コードの検証
+# def confirm
+#   return status_forbidden if @phone.blank?
+#   return status_bad_request unless @phone.valid_code?(code: confirmation_params[:confirmation_code])
+#   ActiveRecord::Base.transaction do
+#     @phone.is_confirmed = true
+#     @phone.phone_number = @phone.confirming_number
+#     @phone.save!
+#     status_updated(representer.single_default(phone))
+#   end
+# end
+# # https://blog.spacemarket.com/code/twilio-rails-sms/
