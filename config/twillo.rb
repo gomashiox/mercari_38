@@ -9,7 +9,7 @@ auth_token = '661eeda03e3deefdf93c85ac59a85f64'
 
 message = @client.messages
   .create(
-     body: "MERCARI_38 認証コード: #{code}",
+     body: "MERCARI_38",
      from: '+17275135102',
      to: '+8108035937613'
    )
