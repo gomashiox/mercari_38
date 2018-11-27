@@ -24,16 +24,14 @@
     .m-single-container
       .single-title-confirm 電話番号認証
       .confirmation-form-inner
-      %form{ action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
         .s-single-container
           .form-group__input
             %label 認証番号
             %input.input-default{ autocomplete: "off", name: "name", placeholder: "認証番号を入力", type: "name"}/
             %p SMSで届いた認証番号を入力してください
           .form-group__input
-            = link_to "認証をして完了", new_user_address_path, class: "next-submit btn-default"
-            / # =link_to "認証をして完了", root_path, class: "next-submit btn-default"
-            / %button.next-submit.btn-default{type: "submit"} 認証をして完了
+            / = f.submit "認証をして完了", class: "next-submit btn-default"
+            = link_to "認証をして完了", next_wizard_path, class: "next-submit btn-default"
       .confirmation-form-inner
         .s-single-container
           .form-group__input

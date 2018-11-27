@@ -24,16 +24,14 @@
     .m-single-container
       .single-title-confirm 電話番号の確認
       .registration-form-inner
-      %form{ action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
         .s-single-container
           .form-group__input
             %label 携帯電話の番号
-            / = f.telephone_field :phone_number, placeholder: "携帯電話の番号を入力", class: "input-default", maxlength: "10", autofocus: true
             %input.input-default{ autocomplete: "off", name: "name", placeholder: "携帯電話の番号を入力", type: "name"}/
             %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
           .form-group__input
-            = link_to "SMSを送信する", user_sms_authorization_path, class: "next-submit btn-default"
+            = link_to "SMSを送信する", next_wizard_path, class: "next-submit btn-default"
             %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
-          .form-group__text 
+          .form-group__text
             %a{ href: "https://www.mercari.com/jp/help_center/article/244/"} 電話番号の確認が必要な理由＞
 = render 'shared/login_footer'
