@@ -127,8 +127,7 @@
             .sell-form-box.hidden3
               = f.label :size, "サイズ", {class: 'form-label'}
               .select-wrap3
-                = f.select :size, [["----", "----"],["XS", "XS"], ["S", "S"],["M", "M"],["L", "L"],["XL", "XL"]],{},{class: "select-default-sell", id: "size"}
-
+                = f.collection_select :size_id, Size.all, :id, :name, { prompt: '----'}, {class: "select-default-sell", id: "size_id"}
 
             .form-group-sell
               = f.label :condition, "商品の状態", {class: 'form-label'}
