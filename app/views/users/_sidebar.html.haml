@@ -95,6 +95,7 @@
             電話番号の確認
             %i.fas.fa-angle-right.fa-lg
         %li
-          %a.mypage-nav__list--item{href: ""}
-            ログアウト
+          = link_to logout_users_path, class: "a mypage-nav__list--item" do
             %i.fas.fa-angle-right.fa-lg
+            ログアウト
+

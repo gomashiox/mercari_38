@@ -1,0 +1,12 @@
+= render 'items/header'
+= render 'users/sidebar'
+.l-container.clearfix
+  .mypage.clearfix
+    .logout-content
+      .chapter-container
+        .form-section
+          = link_to destroy_session_path, method: :delete do
+            %button.logout-red ログアウト
+= render 'items/new_item_btn'
+= render 'items/footbanner'
+= render 'items/footer'

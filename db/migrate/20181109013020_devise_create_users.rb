@@ -5,15 +5,15 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :email, null: false
       t.string :encrypted_password, null: false
       t.text :profile, limit: 10000
-      t.string :phone_number, null: false, unique: true, default: ""
-      t.string :first_name, null: false, limit: 35, default: ""
-      t.string :last_name, null: false, limit: 35, default: ""
-      t.string :first_name_kana, null: false, limit: 35, default: ""
-      t.string :last_name_kana, null: false, limit: 35, default: ""
-      t.string :zipcode, null: false, default: ""
-      t.string :prefecture, null: false, default: ""
-      t.string :city, null: false, default: ""
-      t.string :address_1, null: false, default: ""
+      t.string :phone_number, default: ""
+      t.string :first_name, limit: 35
+      t.string :last_name, limit: 35
+      t.string :first_name_kana, limit: 35
+      t.string :last_name_kana, limit: 35
+      t.string :zipcode
+      t.string :prefecture
+      t.string :city
+      t.string :address_1
       t.string :address_2
       t.string :birthday
       t.string :reset_password_token

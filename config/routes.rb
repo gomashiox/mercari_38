@@ -12,8 +12,13 @@ Rails.application.routes.draw do
     get 'signup/complete', to: 'devise/registrations#complete', as: :new_user_complete
   end
 
-  resources :users, only: [:show, :update]
   resources :registrations
+
+  resources :users, only: [:index, :show, :update] do
+    collection do
+      get 'logout'
+    end
+  end
 
   resource :items do
     collection do
