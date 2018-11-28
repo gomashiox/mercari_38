@@ -5,7 +5,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :email, null: false
       t.string :encrypted_password, null: false
       t.text :profile, limit: 10000
-      t.string :phone_number
+      t.string :phone_number, default: ""
       t.string :first_name, limit: 35
       t.string :last_name, limit: 35
       t.string :first_name_kana, limit: 35
