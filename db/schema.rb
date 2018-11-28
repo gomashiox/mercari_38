@@ -98,19 +98,25 @@ ActiveRecord::Schema.define(version: 20181116122310) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "nickname",               limit: 20
-    t.string   "email",                                null: false
-    t.string   "encrypted_password",                   null: false
+    t.string   "email",                                             null: false
+    t.string   "encrypted_password",                                null: false
     t.text     "profile",                limit: 65535
-    t.string   "phone_number",                         null: false
-    t.string   "first_name",             limit: 35,    null: false
-    t.string   "last_name",              limit: 35,    null: false
-    t.string   "address",                              null: false
-    t.string   "birthday",                             null: false
+    t.string   "phone_number",                         default: "", null: false
+    t.string   "first_name",             limit: 35,    default: "", null: false
+    t.string   "last_name",              limit: 35,    default: "", null: false
+    t.string   "first_name_kana",        limit: 35,    default: "", null: false
+    t.string   "last_name_kana",         limit: 35,    default: "", null: false
+    t.string   "zipcode",                              default: "", null: false
+    t.string   "prefecture",                           default: "", null: false
+    t.string   "city",                                 default: "", null: false
+    t.string   "address_1",                            default: "", null: false
+    t.string   "address_2"
+    t.string   "birthday"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "seller_id",                            null: false
-    t.integer  "buyer_id",                             null: false
+    t.integer  "seller_id"
+    t.integer  "buyer_id"
     t.index ["email", "reset_password_token"], name: "index_users_on_email_and_reset_password_token", unique: true, using: :btree
   end
 
