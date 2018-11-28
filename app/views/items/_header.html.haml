@@ -1,7 +1,8 @@
 .default-containerz
   %header
     .logo-and-search__logo.left-float
-      = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1324730246'
+      = link_to root_path do
+        = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1324730246'
     .search
       %form.logo-and-search__search.right-float
         %input{value:"", placeholder:"キーワードから探す" }
@@ -17,10 +18,10 @@
               %a{href: ""} ブランドから探す
       .signin-and-signup.right-float
         %ul.account
-          / %li.signin-btn
-          /   = link_to "ログイン", new_user_session_path, class: "signin-btn__text"
-          / %li.signup-btn
-          /   = link_to "新規会員登録", index_user_registration_path, class: "signup-btn__text"
+          %li.signin-btn
+            = link_to "ログイン", new_user_session_path, class: "signin-btn__text"
+          %li.signup-btn
+            = link_to "新規会員登録", new_user_registration_path, class: "signup-btn__text"
       .sign-in-after
         .header-user-nav__acount
           = image_tag "user_photo_noimage.png", class: "icon_image"

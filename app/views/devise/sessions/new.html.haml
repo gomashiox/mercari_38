@@ -1,30 +1,9 @@
-:javascript
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '{your-app-id}',
-      cookie     : true,
-      xfbml      : true,
-      version    : '{api-version}'
-    });
-      
-    FB.AppEvents.logPageView();   
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
 = render 'shared/login_header'
 %main.single-main
   .login-panel
     .login-no-account
       %p アカウントをお持ちでない方はこちら
-      = link_to "新規会員登録", index_user_registration_path, class: "signup-btn"
+      = link_to "新規会員登録", new_user_registration_path, class: "signup-btn"
     .login-form-inner
       %button#facebook-login.btn-default.btn-sns__facebook
         .loginbutton.fab.fa-facebook-square
@@ -32,15 +11,15 @@
       %button#google-login.btn-default.btn-sns__google
         .loginbutton.fab.fa-google-plus-g
         Googleでログイン
-    %form{ action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+    = form_for(resource, as: resource_name, url: new_user_session_path) do |f|
       .login-form-inner
         .form-group
-          %input.input-default{ autocomplete: "off", name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "input-default"
         .form-group
-          %input.input-default{ autocomplete: "off", name: "password", placeholder: "パスワード", type: "password"}/
+          = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード", class: "input-default"
         .form-group
           .g-recaptcha{"data-sitekey": "6LeK9HkUAAAAAL8mLfKNdK_vo7oKQN0joY0w_74e"}
-          %button.login-submit.btn-default{type: "submit"} ログイン
+          = f.submit "ログイン", class: "button login-submit btn-default"
           %input{ name: "login_callback", type: "hidden", value: "https://www.mercari.com/jp/"}/
           %input{ name: "__csrf_value", type: "hidden"}/
           %a{ href: "https://www.mercari.com/jp/password/reset/start/"} パスワードをお忘れの方
@@ -48,21 +27,3 @@
   / %form#login_form_facebook{action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
   / %form#login_form_google{action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
 = render 'shared/login_footer'
-
-/ %h2 Log in
-/ = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-/   .field
-/     = f.label :email
-/     %br/
-/     = f.email_field :email, autofocus: true, autocomplete: "email"
-/   .field
-/     = f.label :password
-/     %br/
-/     = f.password_field :password, autocomplete: "current-password"
-/   - if devise_mapping.rememberable?
-/     .field
-/       = f.check_box :remember_me
-/       = f.label :remember_me
-/   .actions
-/     = f.submit "Log in"
-/ = render "devise/shared/links"
