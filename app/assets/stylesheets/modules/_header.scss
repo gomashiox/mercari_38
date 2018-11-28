@@ -139,15 +139,20 @@
  display: inline-block;
  float:right;
  }
- .header-user-nav__acount {
-   display: inline-block;
-   width: 140px;
-   img {
-   width: 32px;
-   height: 32px;
-   border-radius: 50%;
-   margin: 8px 10px -10px;
- }
+.header-user-nav__acount {
+  display: inline-block;
+  width: 140px;
+  img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 8px 10px -10px;
+  }
+  .mypage_icon{
+    text-decoration: none;
+    font-family: "Font Awesome 5 Free";
+    color: #333;
+  }
 }
  .header-user-nav__notice {
    display: inline-block;
@@ -157,3 +162,4 @@
      display: inline-block;
      width: 120px;
    }
+
