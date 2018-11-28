@@ -87,9 +87,7 @@
           %span.item-tax (税込)
           %span.item-shipping-fee
             送料込み！
-
-        %a.item-buy-btn.bold{"data-client": "hidden", href: "items/deals/dealing"} 購入画面に進む
-
+        = link_to "購入画面に進む", dealing_deals_path, class: "a item-buy-btn bold"
         .item-description
           %p.item-description-inner
             【商品説明】

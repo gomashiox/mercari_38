@@ -6,6 +6,23 @@
 -#   -# %img#img1{:style => "width:300px;height:300px;"}/
 
 .single-main
+  #modal01.preview-modal
+    .overLay
+      .preview-inner
+        .preview-inner-header-left
+          写真を切り取る
+        %a.modalClose{:href => ""}
+          close
+        %img#canvas{:height => "380", :style => "cursor: grab;", :width => "380"}
+          .canvas-outflame
+            .canvas-inflame
+        %i.fa.fa-camera.small
+        %input.input-range-default{:max => "2", :min => "1", :name => "scale", :step => "0.01", :type => "range", :value => "1"}
+        %i.fa.fa-camera.big
+        .preview-crop-btn
+          %a.crop-btn-left{:href => ""} キャンセル
+          %a.crop-btn-right{:href => ""} 完了
+
   .sell-container
     .sell-container__inner
       = form_for (@item), html:{id: 'sell-form'} do |f|
@@ -26,16 +43,32 @@
                     %li.sell-upload-drop-box#preview1
                       = f.file_field :image_url, class: "sell-upload-drop-file", type: :file
                       %img#img1{:style => "width:138px;height:138px;", class: "img1",}
+                        %div#img-edit
+                          %a.modalOpen1{:href => "#modal01"} 編集
+                        %div#img-delite
+                          %a 削除
+
                     %li.sell-upload-drop-box#preview2
                       = f.file_field :image_url, class: "sell-upload-drop-file", type: :file
                       %img#img2{:style => "width:138px;height:138px;", class: "img2",}
+                        %div#img2-edit
+                          %a{:href => ""} 編集
+                        %div#img2-delite
+                          %a 削除
                     %li.sell-upload-drop-box#preview3
                       = f.file_field :image_url, class: "sell-upload-drop-file", type: :file
                       %img#img3{:style => "width:138px;height:138px;", class: "img3",}
+                        %div#img3-edit
+                          %a{:href => ""} 編集
+                        %div#img3-delite
+                          %a 削除
                     %li.sell-upload-drop-box#preview4
                       = f.file_field :image_url, class: "sell-upload-drop-file", style: "none", type: :file
                       %img#img4{:style => "width:138px;height:138px;", class: "img4",}
-
+                        %div#img4-edit
+                          %a{:href => ""} 編集
+                        %div#img4-delite
+                          %a 削除
 
 
           -# .sell-dropbox-container
