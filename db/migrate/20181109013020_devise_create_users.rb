@@ -19,8 +19,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :reset_password_token
       t.datetime :reset_password_sent_at
       t.datetime :remember_created_at
-      t.integer :seller_id, null:false, default: "0"
-      t.integer :buyer_id, null:false, default: "0"
+      t.integer :seller_id
+      t.integer :buyer_id
     end
     add_index :users, [:email, :reset_password_token], unique: true
   end
