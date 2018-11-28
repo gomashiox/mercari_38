@@ -30,7 +30,6 @@
             %input.input-default{ autocomplete: "off", name: "name", placeholder: "認証番号を入力", type: "name"}/
             %p SMSで届いた認証番号を入力してください
           .form-group__input
-            / = f.submit "認証をして完了", class: "next-submit btn-default"
             = link_to "認証をして完了", next_wizard_path, class: "next-submit btn-default"
       .confirmation-form-inner
         .s-single-container
