@@ -1,0 +1,16 @@
+.header-breadcrumbs{
+  font-weight: bold;
+  border-top: #f5f5f5 solid 2px;
+  background: white;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  &__inner{
+   padding: 16px 174px;
+   margin: 0 auto;
+   letter-spacing: 0.2em;
+   a{
+     color: #333;
+     text-decoration: none;
+     font-weight:200;
+    }
+  }
+}
