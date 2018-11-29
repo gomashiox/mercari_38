@@ -2,7 +2,7 @@ class RegistrationsController < ApplicationController
   before_action :set_group, only: [:show, :update]
 
   include Wicked::Wizard
-  steps :confirm, :auth, :address, :card
+  steps :confirm, :auth, :address, :card, :complete
 
   def show
     render_wizard
@@ -16,7 +16,7 @@ class RegistrationsController < ApplicationController
   private
 
   def finish_wizard_path
-    new_user_complete_path(User.find(session[:user_id]))
+    root_path(User.find(session[:user_id]))
   end
 
   def user_params
