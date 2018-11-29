@@ -103,3 +103,10 @@ CategoryS.create!([
   {name: "ゲーム本体", category_m_id: 21},
   {name: "ゲームソフト", category_m_id: 21}
 ])
+Size.create!([
+  {category_s_id: "1", name: "XS"},
+  {category_s_id: "1", name: "S"},
+  {category_s_id: "1", name: "M"},
+  {category_s_id: "1", name: "L"},
+  {category_s_id: "1", name: "XL"}
+])
