@@ -9,7 +9,6 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-<<<<<<< HEAD
 
 ActiveRecord::Schema.define(version: 20181116122310) do
 
@@ -78,6 +77,7 @@ ActiveRecord::Schema.define(version: 20181116122310) do
     t.integer "size_id",                     null: false
     t.integer "seller_id"
     t.integer "buyer_id"
+    t.string  "image_url"
     t.index ["category_l_id"], name: "index_items_on_category_l_id", using: :btree
     t.index ["category_m_id"], name: "index_items_on_category_m_id", using: :btree
     t.index ["category_s_id"], name: "index_items_on_category_s_id", using: :btree
@@ -102,15 +102,15 @@ ActiveRecord::Schema.define(version: 20181116122310) do
     t.string   "email",                                             null: false
     t.string   "encrypted_password",                                null: false
     t.text     "profile",                limit: 65535
-    t.string   "phone_number",                         default: "", null: false
-    t.string   "first_name",             limit: 35,    default: "", null: false
-    t.string   "last_name",              limit: 35,    default: "", null: false
-    t.string   "first_name_kana",        limit: 35,    default: "", null: false
-    t.string   "last_name_kana",         limit: 35,    default: "", null: false
-    t.string   "zipcode",                              default: "", null: false
-    t.string   "prefecture",                           default: "", null: false
-    t.string   "city",                                 default: "", null: false
-    t.string   "address_1",                            default: "", null: false
+    t.string   "phone_number",                         default: ""
+    t.string   "first_name",             limit: 35
+    t.string   "last_name",              limit: 35
+    t.string   "first_name_kana",        limit: 35
+    t.string   "last_name_kana",         limit: 35
+    t.string   "zipcode"
+    t.string   "prefecture"
+    t.string   "city"
+    t.string   "address_1"
     t.string   "address_2"
     t.string   "birthday"
     t.string   "reset_password_token"
@@ -134,5 +134,3 @@ ActiveRecord::Schema.define(version: 20181116122310) do
   add_foreign_key "likes", "items"
   add_foreign_key "likes", "users"
 end
-=======
->>>>>>> Mame1209/master
