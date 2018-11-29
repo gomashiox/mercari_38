@@ -14,6 +14,7 @@ class CreateItems < ActiveRecord::Migration[5.0]
       t.references :size, null:false, foreign_key: true
       t.integer :seller_id
       t.integer :buyer_id
+      t.string :image_url
     end
     add_index :items, :name
   end

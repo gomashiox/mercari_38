@@ -86,7 +86,7 @@ $(function(){
 
   // Submit時に実行するPOST処理
   $('#submitBtn').on('click', function(event){
-        console.log("test2")
+
     $(this).parents(".preview-modal").fadeOut();
             console.log("test3")
     $(".modalOpen").removeClass("open");
@@ -94,31 +94,12 @@ $(function(){
     // var src = $("#canvas").attr('src');
     $("#img1").attr("src", $("#canvas").attr('src'));
             console.log("test5")
-    // $("#img1").attr("src", $("#canvas").attr('src'));
-    // // クロップ後のファイルをblobに変換し、AjaxでForm送信
-    // croppedCanvas.toBlob(function (blob) {
-    //   const fileOfBlob = new File([blob], fileName);
-    //   var formData = new FormData();
-    //   // `employee[avatar]` は `employee` modelに定義した `mount_uploader :avatar, AvatarUploader` のコト
-    //   formData.append('employee[avatar]', fileOfBlob);
-    //   // EmployeeのID取得
-    //   const employee_id = $('#employee_id').val();
-    //   $.ajax('/avatar/' + employee_id + '/update', {
-    //     method: "PATCH", // POSTの方が良いのかな？
-    //     data: formData,
-    //     processData: false, // 余計な事はせず、そのままSUBMITする設定？
-    //     contentType: false,
-    //     success: function (res) {
-    //       // DOM操作にしたほうがいいのかな？その場合、アップロード後に実行するなどのポーリング処理的なサムシングが必要になりそう・・・
-    //       // なので、とりあえず簡単に`location.reload`しちゃう
-    //       location.reload();
-    //     },
-    //     error: function (res) {
-    //       console.error('Upload error');
-    //     }
-    //   });
-    // // S3にアップロードするため画質を50%落とす
-    // }, 'image/jpeg', 0.5);
+
+
   });
 
 });
+
+
+
+
