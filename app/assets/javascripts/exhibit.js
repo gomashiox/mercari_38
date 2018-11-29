@@ -5,13 +5,6 @@ $(function() {
     $('.hidden4').css("display", "none");
     $('.hidden5').css("display", "none");
   });
-   // $("#category1").change(function(){
-
-   //  }
-
-  //  $("#category2").change(function(){
-
-  // });
 $(document).on('change', '#category3', function() {
     if ($('#category3').val() == "----" ){
        $('.hidden3').hide();
@@ -21,15 +14,6 @@ $(document).on('change', '#category3', function() {
       $('.hidden4').show();
     }
   });
-
-  //  $("#cost").change(function(){
-  //   if ($('#cost').val() == "----" ){
-  //      $('.hidden5').hide();
-  //   } else{
-  //     $('.hidden5').show();
-  //   }
-  // });
-
 
 $(document).on('change', '#category1', function() {
   console.log("test");
