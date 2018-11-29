@@ -34,6 +34,7 @@ end
   gem 'seed-fu'
   gem 'wicked'
   gem 'twilio-ruby', '~> 5.16.0'
+  gem 'gretel'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
